@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lchj.babygo.MainAct">
+    <LinearLayout
+        android:id="@+id/rg_babygo_tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#f2ffffff"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:splitMotionEvents="false"
+            android:id="@+id/rb_tab_menu_header"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/headertabselector"
+            android:gravity="center|center"
+            android:paddingTop="4dp"
+            android:text="首页"
+            android:layout_marginTop="10px"
+            android:drawablePadding="10px"
+            android:textColor="@color/headercolorselector"
+            android:textSize="@dimen/main_tab_menu_text_size" />
+
+        <RadioButton
+            android:splitMotionEvents="false"
+            android:id="@+id/rb_tab_menu_doyenO"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:paddingTop="4dp"
+            android:drawableTop="@drawable/doyentabselector"
+            android:gravity="center|center"
+            android:layout_marginTop="10px"
+            android:drawablePadding="10px"
+            android:text="达人圈"
+            android:textColor="@color/headercolorselector"
+            android:textSize="@dimen/main_tab_menu_text_size" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null" />
+
+        <RadioButton
+            android:splitMotionEvents="false"
+            android:id="@+id/rb_tab_menu_topic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:paddingTop="4dp"
+            android:drawableTop="@drawable/topictabselector"
+            android:gravity="center|center"
+            android:layout_marginTop="10px"
+            android:drawablePadding="10px"
+            android:text="社区"
+            android:textColor="@color/headercolorselector"
+            android:textSize="@dimen/main_tab_menu_text_size" />
+
+        <RadioButton
+            android:splitMotionEvents="false"
+            android:id="@+id/rb_tab_menu_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:paddingTop="4dp"
+            android:drawableTop="@drawable/mytabselector"
+            android:gravity="center|center"
+            android:layout_marginTop="10px"
+            android:drawablePadding="10px"
+            android:text="我的"
+            android:textColor="@color/headercolorselector"
+            android:textSize="@dimen/main_tab_menu_text_size" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/mian_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/rg_babygo_tab_menu"
+        android:background="#ccc"></View>
+    <FrameLayout
+        android:splitMotionEvents="false"
+        android:id="@+id/fl_mian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/mian_view">
+    </FrameLayout>
+    <ImageView
+        android:splitMotionEvents="false"
+        android:id="@+id/iv_tab_map_Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50px"
+        android:src="@mipmap/tab_leida2" />
+    <ImageView
+        android:id="@+id/iv_tab_public_Photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50px"
+        android:src="@mipmap/common_tab_write"
+        android:visibility="gone" />
+
+</RelativeLayout>

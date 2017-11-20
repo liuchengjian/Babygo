@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_header_recpmmend_activity_item"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_activity_background_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#7f000000"></View>
+
+            <ImageView
+                android:id="@+id/iv_icon_activity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:id="@+id/ll_header_recpmmend_activity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_activity_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="【寻找时光机】"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_activity_name"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="童趣亲子互动营~10.6——11.6"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cornerbutton"
+                        android:text="5 +"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textSize="10sp"
+                        android:layout_toStartOf="@+id/tv_tributeone"
+                        android:layout_marginLeft="40dp"
+                        android:textColor="@color/main_yellow" />
+
+                    <TextView
+                        android:id="@+id/tv_tributeone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/cornerbutton"
+                        android:gravity="center"
+                        android:text="微短片"
+                        android:textSize="10sp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/main_yellow" />
+
+                    <TextView
+                        android:id="@+id/tv_tributetwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cornerbutton"
+                        android:text="摄影"
+                        android:textSize="10sp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_toEndOf="@+id/tv_tributeone"
+                        android:textColor="@color/main_yellow" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="10人预约"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#fff" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
