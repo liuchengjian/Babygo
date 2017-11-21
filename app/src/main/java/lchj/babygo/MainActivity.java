@@ -12,18 +12,20 @@ import android.support.v7.widget.Toolbar;
 import com.joanzapata.iconify.widget.IconTextView;
 
 import butterknife.BindView;
+import lchj.babygo.common.BaseActivity;
 import lchj.babygo.mian.index.IndexDataConverter;
 import lchj.babygo.recycler.BaseDecoration;
 import lchj.babygo.refresh.RefreshHandler;
 import lchj.babygo.utils.AllUrl;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 //    @BindView(R2.id.rv_index)
     RecyclerView mRecyclerView = null;
 //    @BindView(R2.id.srl_index)
     SwipeRefreshLayout mRefreshLayout = null;
 
     private RefreshHandler mRefreshHandler = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

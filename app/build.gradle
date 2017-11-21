@@ -58,4 +58,9 @@ dependencies {
     //RecyclerView 分割线
     implementation 'com.choices.divider:RecyclerView_Divider:1.0.0'
     implementation files('libs/xutils-3.3.2.jar')
+
+    //圆形图片
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //九宫格图片显示
+    implementation 'com.lzy.widget:ninegridview:0.2.0'
 }

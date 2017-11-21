@@ -53,8 +53,6 @@ public class IndexFragment extends Fragment {
         final GridLayoutManager manager = new GridLayoutManager(getContext(),4);
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.addItemDecoration(BaseDecoration.create(
-                ContextCompat.getColor(getContext(), R.color.main_div),40));
-
-
+                ContextCompat.getColor(getContext(), R.color.main_div),30));
     }
 }
