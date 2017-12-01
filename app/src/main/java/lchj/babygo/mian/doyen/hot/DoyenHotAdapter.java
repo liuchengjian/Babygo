@@ -1,5 +1,6 @@
 package lchj.babygo.mian.doyen.hot;
 
+import android.content.Context;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,9 +27,11 @@ public class DoyenHotAdapter extends MultipleRecyclerAdapter {
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .centerCrop()
             .dontAnimate();
+    Context context;
 
-    protected DoyenHotAdapter(List<MultipleItemEntity> data) {
-        super(data);
+    protected DoyenHotAdapter(List<MultipleItemEntity> data,Context context) {
+        super(data, context);
+        this.context = context;
         //添加hot item布局
         addItemType(DoyenItemType.DOYEN_HOT_ITEM, R.layout.item_doyen_hoy);
 
@@ -54,6 +57,7 @@ public class DoyenHotAdapter extends MultipleRecyclerAdapter {
 
                 //取出所以控件
                 final TextView tvName = holder.getView(R.id.list_doyen_hot_name);
+
                 final TextView tvIconText = holder.getView(R.id.list_doyen_hot_iconText);
                 final TextView tvTitle = holder.getView(R.id.list_doyen_hot_title);
                 final TextView tvText = holder.getView(R.id.tv_doyen_hot_text);

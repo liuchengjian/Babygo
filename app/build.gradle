@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.butterknife'
+//apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 26
@@ -21,46 +21,91 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
     //字体图标
     implementation 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
     implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
-    //ButterKnife依赖
-    implementation 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //    //ButterKnife依赖
+
+    //    implementation 'com.jakewharton:butterknife:8.4.0'
+
+    //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
     //Fragment依赖
     compile 'me.yokeyword:fragmentation:1.1.8'
     compile 'me.yokeyword:fragmentation-swipeback:1.1.8'
+
     //网络请求依赖
     implementation 'com.squareup.okio:okio:1.13.0'
     implementation 'com.squareup.okhttp3:okhttp:3.8.1'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
     //Loader依赖
     implementation 'com.wang.avi:library:2.1.3'
+
     //JSON依赖Android版
     implementation 'com.alibaba:fastjson:1.1.57.android'
+
     //Banner依赖
     implementation 'com.bigkoo:convenientbanner:2.0.5'
     implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
     //RecyclerView依赖
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
-    //    //图片处理
+
+    //图片处理
     implementation 'com.github.bumptech.glide:glide:4.0.0-RC0'
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.0.0-RC0@aar'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
+
     //RecyclerView 分割线
     implementation 'com.choices.divider:RecyclerView_Divider:1.0.0'
-    implementation files('libs/xutils-3.3.2.jar')
 
     //圆形图片
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
     //九宫格图片显示
     implementation 'com.lzy.widget:ninegridview:0.2.0'
+
+    //动态权限处理
+    implementation 'com.github.hotchemi:permissionsdispatcher:3.0.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.0.1'
+
+    //图片剪裁
+    implementation 'com.github.yalantis:ucrop:2.2.1-native'
+
+    //工具包
+    implementation 'com.blankj:utilcode:1.9.3'
+
+    //时间选择器、地址选择器、单选选择器
+
+    //    implementation 'com.contrarywind:Android-PickerView:3.2.7'
+    implementation 'com.airsaid.library:pickerviewlibrary:1.0.0'
+
+    //AgentWeb
+    implementation 'com.just.agentweb:agentweb:2.0.1'
+
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //沉浸式状态栏
+    implementation 'com.github.niorgai:StatusBarCompat:2.1.4'
+
+    //Fragment依赖
+    implementation 'me.yokeyword:fragmentation:1.1.8'
+    implementation 'me.yokeyword:fragmentation-swipeback:1.1.8'
+
+    implementation 'org.xutils:xutils:3.5.0'
+
 }

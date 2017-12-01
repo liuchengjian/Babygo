@@ -20,5 +20,7 @@ public enum IndexMultipleFields {
     ICON_TWO,
     ICON_THREE,
     NAME,
+    TYPE,
+    URL,
     TAG
 }

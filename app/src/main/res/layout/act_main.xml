@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="lchj.babygo.MainAct">
@@ -27,7 +28,8 @@
             android:layout_marginTop="10px"
             android:drawablePadding="10px"
             android:textColor="@color/headercolorselector"
-            android:textSize="@dimen/main_tab_menu_text_size" />
+            android:textSize="@dimen/main_tab_menu_text_size"
+            />
 
         <RadioButton
             android:splitMotionEvents="false"

@@ -32,9 +32,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".MainAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +40,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".mian.my.profile.UserProfileActivity" />
+        <!-- 图片剪裁Activity -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".mian.index.profile.activity.ActivityProfileActivity" />
+        <activity android:name=".mian.my.setting.SettingsActivity" />
+        <activity android:name=".mian.index.profile.article.ArticleProfileActivity"></activity>
     </application>
 
 </manifest>

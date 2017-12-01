@@ -1,5 +1,6 @@
 package lchj.babygo.refresh;
 
+import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 
@@ -28,20 +29,23 @@ public class RefreshHandler implements
     private final RecyclerView RECYCLERVIEW;
     private MultipleRecyclerAdapter mAdapter = null;
     private final DataConverter CONVERTER;
+    Context context;
 
     private RefreshHandler(SwipeRefreshLayout swipeRefreshLayout,
                            RecyclerView recyclerView,
-                           DataConverter converter, PagingBean bean) {
+                           DataConverter converter, PagingBean bean,Context context) {
         this.REFRESH_LAYOUT = swipeRefreshLayout;
         this.RECYCLERVIEW = recyclerView;
         this.CONVERTER = converter;
         this.BEAN = bean;
+        this.context =context;
         REFRESH_LAYOUT.setOnRefreshListener(this);
+
     }
 
     public static RefreshHandler create(SwipeRefreshLayout swipeRefreshLayout,
-                                        RecyclerView recyclerView, DataConverter converter) {
-        return new RefreshHandler(swipeRefreshLayout, recyclerView, converter, new PagingBean());
+                                        RecyclerView recyclerView, DataConverter converter,Context context) {
+        return new RefreshHandler(swipeRefreshLayout, recyclerView, converter, new PagingBean(),context);
     }
 
     private void refresh() {
@@ -66,7 +70,7 @@ public class RefreshHandler implements
                         BEAN.setTotal(object.getInteger("total"))
                                 .setPageSize(object.getInteger("page_size"));
                         //设置Adapter
-                        mAdapter = MultipleRecyclerAdapter.create(CONVERTER.setJsonData(response));
+                        mAdapter = MultipleRecyclerAdapter.create(CONVERTER.setJsonData(response),context);
                         mAdapter.setOnLoadMoreListener(RefreshHandler.this, RECYCLERVIEW);
                         RECYCLERVIEW.setAdapter(mAdapter);
                         BEAN.addIndex();

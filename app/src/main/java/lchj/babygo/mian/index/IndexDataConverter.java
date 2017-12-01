@@ -37,6 +37,7 @@ public class IndexDataConverter extends DataConverter {
 
             final int spanSize = data.getInteger("spanSize");
             final int id = data.getInteger("id");
+            final int Type =  data.getInteger("type");
             final JSONArray banners = data.getJSONArray("banners");
 
             final ArrayList<String> bannerImages = new ArrayList<>();
@@ -64,6 +65,7 @@ public class IndexDataConverter extends DataConverter {
                     .setField(IndexMultipleFields.TITLE, title)
                     .setField(IndexMultipleFields.NAME, name)
                     .setField(IndexMultipleFields.TIME, time)
+                    .setField(IndexMultipleFields.TYPE, Type)
                     .setField(IndexMultipleFields.ICON_URL, iconUrl)
                     .setField(IndexMultipleFields.HEAD_URL, headUrl)
                     .setField(IndexMultipleFields.IMAGE_URL, imageUrl)

@@ -1,27 +1,25 @@
 package lchj.babygo;
 
-import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
-import java.util.ArrayList;
-
+import lchj.babygo.common.BaseActivity;
 import lchj.babygo.mian.doyen.DoyenFragment;
 import lchj.babygo.mian.index.IndexFragment;
 import lchj.babygo.mian.my.MyFragment;
 import lchj.babygo.mian.topic.TopicFragment;
 
-public class MainAct extends AppCompatActivity implements View.OnClickListener{
+public class MainAct extends BaseActivity implements View.OnClickListener{
     @ViewInject(R.id.rb_tab_menu_header)
     private RadioButton mRB_tab_header;
     @ViewInject(R.id.rb_tab_menu_topic)
@@ -61,7 +59,9 @@ public class MainAct extends AppCompatActivity implements View.OnClickListener{
         x.view().inject(this);
         listener();
         select(0);
+
     }
+
     private void listener() {
         mRB_tab_header.setOnClickListener(this);
         mRB_tab_doyenO.setOnClickListener(this);
@@ -179,5 +179,9 @@ public class MainAct extends AppCompatActivity implements View.OnClickListener{
             default:
                 break;
         }
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }

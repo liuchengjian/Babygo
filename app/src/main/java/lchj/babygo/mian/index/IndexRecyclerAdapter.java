@@ -1,6 +1,7 @@
 package lchj.babygo.mian.index;
 
 import android.support.v7.widget.GridLayoutManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -60,7 +61,7 @@ public class IndexRecyclerAdapter extends
 
     @Override
     public void onItemClick(int position) {
-
+        Log.e("","position:"+position);
     }
 
     @Override

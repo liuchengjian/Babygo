@@ -1,6 +1,8 @@
 package lchj.babygo;
 
+import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -19,8 +21,6 @@ import lchj.babygo.banner.BannerCreator;
 import lchj.babygo.mian.index.IndexItemType;
 import lchj.babygo.mian.index.IndexMultipleFields;
 import lchj.babygo.recycler.DataConverter;
-import lchj.babygo.recycler.ItemType;
-import lchj.babygo.recycler.MultipleFields;
 import lchj.babygo.recycler.MultipleItemEntity;
 import lchj.babygo.recycler.MultipleViewHolder;
 
@@ -34,6 +34,7 @@ public class MultipleRecyclerAdapter extends
         implements
         BaseQuickAdapter.SpanSizeLookup,
         OnItemClickListener {
+     Context context;
 
     //确保初始化一次Banner，防止重复Item加载
     private boolean mIsInitBanner = false;
@@ -44,17 +45,18 @@ public class MultipleRecyclerAdapter extends
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .dontAnimate();
 
-    protected MultipleRecyclerAdapter(List<MultipleItemEntity> data) {
+    protected MultipleRecyclerAdapter(List<MultipleItemEntity> data, Context context) {
         super(data);
+        this.context = context;
         init();
     }
 
-    public static MultipleRecyclerAdapter create(List<MultipleItemEntity> data) {
-        return new MultipleRecyclerAdapter(data);
+    public static MultipleRecyclerAdapter create(List<MultipleItemEntity> data, Context context) {
+        return new MultipleRecyclerAdapter(data,context);
     }
 
-    public static MultipleRecyclerAdapter create(DataConverter converter) {
-        return new MultipleRecyclerAdapter(converter.convert());
+    public static MultipleRecyclerAdapter create(DataConverter converter, Context context) {
+        return new MultipleRecyclerAdapter(converter.convert(),context);
     }
 
     public void refresh(List<MultipleItemEntity> data) {
@@ -169,6 +171,23 @@ public class MultipleRecyclerAdapter extends
 
     @Override
     public void onItemClick(int position) {
-
+        Log.e("lchj","position:"+position);
+        if(position == 0){
+            //TODO :出处理首页轮播图跳转
+//            Intent intent = new Intent(context, ActivityProfileActivity.class);
+//            context.startActivity(intent);
+        }else if(position ==1){
+            //TODO :出处理首页轮播图跳转
+//            Intent intent = new Intent(context, ActivityProfileActivity.class);
+//            context.startActivity(intent);
+        }else if(position ==2){
+            //TODO :出处理首页轮播图跳转
+//            Intent intent = new Intent(context, ActivityProfileActivity.class);
+//            context.startActivity(intent);
+        }else if(position ==3){
+            //TODO :出处理首页轮播图跳转
+//            Intent intent = new Intent(context, ActivityProfileActivity.class);
+//            context.startActivity(intent);
+        }
     }
 }

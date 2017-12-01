@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import lchj.babygo.R;
 import lchj.babygo.net.RestClient;
 import lchj.babygo.net.callback.ISuccess;
+import lchj.babygo.net.rx.RxRestClient;
 import lchj.babygo.recycler.MultipleItemEntity;
 
 /**
@@ -34,6 +35,7 @@ public class HotFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_hot, null);
         x.view().inject(this, view);
 
+
         RestClient.builder()
                 .url("http://39.108.117.228/BabyGoServer/api/daren_hot.php")
                 .loader(getContext())
@@ -45,7 +47,7 @@ public class HotFragment extends Fragment {
                                 new DoyenHotDataConverter()
                                         .setJsonData(response)
                                         .convert();
-                        mAdapter = new DoyenHotAdapter(data);
+                        mAdapter = new DoyenHotAdapter(data,getContext());
                         final LinearLayoutManager manager = new LinearLayoutManager(getContext());
                         mRecyclerView.setLayoutManager(manager);
                         mRecyclerView.setAdapter(mAdapter);
@@ -53,6 +55,7 @@ public class HotFragment extends Fragment {
                 })
                 .build()
                 .get();
+
         return view;
     }
 }

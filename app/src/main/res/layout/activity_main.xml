@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/srl_index"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_article_profile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" />
 
-        >
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_index"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_article_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        app:layout_behavior="lchj.babygo.mian.index.TranslucentBehavior">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/bask"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动详情"
+                android:textColor="#fff"
+                android:visibility="invisible"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                />
 
-        </android.support.v7.widget.RecyclerView>
-    </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
 
 
+    </android.support.v7.widget.Toolbar>
 
-</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
